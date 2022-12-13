@@ -1,104 +1,162 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-<title>Vlad's Garage</title>
-<!-- <meta charset="utf-8"> -->
-<meta name="viewport" content="width=device-width, initial-scale=1">
-</head>
-<body>
-<link href = "css/index.css" type = "text/css" rel = "stylesheet" />
-<header>
-	<img src="img/Vlad.jpg" alt="" with="290" height="290" id="hp"/>
-  <h1>Vlad's Garage</h1>
-	  <h3>You need not come I come to you!</h3>
-</header>
+<style>
+.dropdown {
+  float: left;
+  overflow: hidden;
+  width: 100%;
+}
+.dropdown .dropbtn {
+  font-size: 16px;
+  border: none;
+  outline: none;
+  color: white;
+  padding: 14px 16px;
+  background-color: #f4511e;
+  font-family: inherit;
+  margin: 0;
 
-<section>
-  <nav background-size: 100% 100%:>
-		<button onClick="openindexPage()">Special offers</button>
-		<script>function openindexPage(){window.location.href='index.html';}</script>
-		<p></p>
-   <button id="about" onClick="openAboutPage()">About our family business</button>
-   <script>function openAboutPage(){window.location.href='aboutme.html';}</script>
-		<p></p>
-			<button id="oil" onClick="openOilPage()"> Changing oil and filter</button>
-			<script>function openOilPage(){window.location.href='oil.html';}</script>
-			<p></p>
-			<button id="about" onClick="openDetailingPage()">Detailing a car</button>
-			<script>function openDetailingPage(){window.location.href='detailing.html';}</script>
-			<p></p>
-			<button id="tint" onClick="openTintPage()">Window/ Head & tail light tint</button>
-			<script>function openTintPage(){window.location.href='tint.html';}</script>
-			<p></p>
-			<button id="break" onClick="openBreakPage()">Breaking pads and rotors change</button>
-			<script>function openBreakPage(){window.location.href='break.html';}</script>
-			<p></p>
-			<button id="code" onClick="openCodePage()">Code reading and fix issue</button>
-			<script>function openCodePage(){window.location.href='code.html';}</script>
-			<p></p>
-			<button id="tiers" onClick="openTiersPage()">Changing tiers</button>
-			<script>function openTiersPage(){window.location.href='tiers.html';}</script>
+}
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: #f9f9f9;
+  width: 30%;
+  /* min-width: 260px; */
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  z-index: 1;
 
+}
+
+.dropdown-content a {
+  float: none;
+  color: black;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+  text-align: left;
+
+}
+
+.dropdown-content a:hover {
+  background-color: #ddd;
+}
+
+.dropdown:hover .dropdown-content {
+  display: block;
+
+
+	</style>
+	<body>
+	<link href = "css/oil.css" type = "text/css" rel = "stylesheet" />
+
+  <header style="background-image: url('img/header.jpg');">
+    <img src="img/Vlad.jpg" alt="" with="260" height="260" id="hp"/>
+      <p style= "float: left">Phone: <a href="tel:6132653037" style="color: #8ebf42;">613 265 3037</a></p>
+    <h1> Vlad's Garage</h1>
+    <h2>You need not come I come to you!</h2>
+  </header>
+
+	<section>
+	  <nav>
+
+     <button onClick="openindexPage()">Home</button>
+     <script>function openindexPage(){window.location.href='index.html';}</script>
+     <p></p>
+     <button onClick="openaboutPage()">About family business</button>
+      <script>function openaboutPage(){  window.location.href='aboutme.html';}</script>
+      <p></p>
+      <button onClick="openMarketPage()">Car Parts required (Form): </button>
+       <script>function openMarketPage(){  window.location.href='marketForm.html';}</script>
+       <p></p>
+       <button onClick="openFormPage()">Car service required (Form):</button>
+       <script>function openFormPage(){window.location.href='form.html';}</script>
+       <p></p>
+
+       <div class="dropdown">
+       <button class="dropbtn">Garage services in Vancouver: </button>
+       <div class="dropdown-content">
+<p></p>
+<button id="safety" onClick="openSafetyPage()">Personal Car Mechanic in Vancouver</button>
+<script>function openSafetyPage(){window.location.href='safety.html';}</script>
+ <p></p>
+      <button onClick="openoilPage()">Change oil and filter</button>
+      <script>function openoilPage(){window.location.href='oil.html';}</script>
+      <p></p>
+      <button id="about" onClick="openDetailingPage()">Detailing a car</button>
+      <script>function openDetailingPage(){window.location.href='detailing.html';}</script>
+			<p></p>
+      <button id="tint" onClick="openTintPage()">Tint a car</button>
+      <script>function openTintPage(){window.location.href='tint.html';}</script>
+			<p></p>
+			<button id="break" onClick="openBreakPage()">Brake pads and rotors change</button>
+      <script>function openBreakPage(){window.location.href='break.html';}</script>
+			<p></p>
+      <button id="code" onClick="openCodePage()">Code reading and fix issue</button>
+      <script>function openCodePage(){window.location.href='code.html';}</script>
+      <p></p>
+      <button id="tiers" onClick="openTiersPage()">Changing tires</button>
+      <script>function openTiersPage(){window.location.href='tiers.html';}</script>
+      <p></p>
+      <button id="about" onClick="openTuningPage()">Tuning a car</button>
+			<script>function openTuningPage(){window.location.href='tuning.html';}
+			</script>
+			<p></p>
+       </div>
+        </div>
   </nav>
+<br>
 
 	<fieldset>
-  <legend><strong>We make your car better!</strong></legend>
+  <legend><strong><h2>We will make performance, speed, and sount of your car better!</h2></strong></legend>
   <table border="1" bordercolor=#666 align="center">
-		  <tr><th></th></tr>
 	 <tr>
-				 <th><img src="img/V_BMW.jpg" style="width:30%"></th>
+				 <th><img src="img/V_BMW.jpg" style="width:60%"></th>
 	</tr>
-	<tr><th>Make your car a part of your family and enjoy driving it with pride!</th></tr>
-    <tr><th>Do you want your car turbo whistle and exhaust pops? We can do that! Upgrade your car performance and sound with us today.</th></tr>
-		<tr><th>Full bolt on Down pipes Intercooler Charged pipe Blow off valve, and more ready to make your car one of a kind to turn heads around. </th></tr>
-		<tr><th>We will teach you how to control the boost on your car and tune your self after the job is done, so you can adjust the car settings to your need just with your phone</th></tr>
-<tr><th>With your smartphone, Android or IOS you can control and adjust performance of your car, or even how loud you want your exhaust to be.</th></tr>
+
+	<p> You are in the trustworthy professional car mechanic hands!</p>
+	<p> This is the best car tuning service in Vancouver.</p>
+	<p> Welcome to the world of performance enhancing modifications!</p>
+	<p> No other garage in Vancouver offers aftermarket part installation and upgrades done at your doorstep.
+		  We can <b>modify your car based on your individual preference </b>, starting at the most basic to a full bolt on.
+			A full bolt on includes upgrading your car downpipe(s), charge pipe, and intercooler.
+			 From there we can build with bigger turbos but it's all based on what you want to get out of your car. </p>
+
+			 	<p>Depending on the vehicle, a full bolt on and tune will add an additional 200-300 horsepower, giving the engine a deep, aggressive growl,
+				and characteristic turbo whistle sound we all know and love. We offer training on how to control your car's tune with your smartphone.
+				 This gives you the capability to change the way your car performs, its fuel economy, the gas it runs on, and even the sound of your exhaust -
+				 just from a few clicks on your phone!</p>
+
+	<p> Do you want your car turbo whistle and exhaust pops? We can do that! <b>Upgrade your car performance and sound</b> with us today.
+	Full bolt on Down pipes Intercooler Charged pipe Blow off valve, and more ready to make your car one of a kind to turn heads around.</p>
+
+	<p>We will teach you how to <b>control the boost on your car</b> and tune yourself after the job is done, so you can adjust the car settings to your need just with your
+	smartphone, Android or IOS. You will control and adjust performance of your car, or even how loud you want your exhaust to be.</p>
+
+	<p>Book your SPEED AND SOUND consultation now through our <a href="form.html">Inquiry Form </a>and we'll come right to you!</p>
+
+	<p> We make <b>regular vehicle check ups</b> to catch any issues that may arise and prevent them from turning into larger (and more expensive!) problems in the future.</p>
+			Invest in your car well-being by getting your own mechanic in Vancouver, someone  who knows you, your car, and the best way to maintain it
+			for whatever lifestyle you may have. We believe in the good old-fashioned style of business, one where we build a long-term relationship between you and your four-wheeled baby!
+
+	<p> Make your car a part of your family and enjoy driving it with pride!</p>
+	<p>	 Add some personality to your car and make it unique by contacting us today through our <a href="form.html">Inquiry Form</a> or call <a href = "tel:6132653037"> 613 265 3037 </a> </p>
+
 	</table>
-
-	<!-- <fieldset>
-	<legend><strong>Be ready for the winter!</strong></legend>
-	<table border="1" bordercolor=#666 align="center">
-			<tr><th></th></tr>
-	 <tr>
-				 <td><img src="img/winter_banner.jpg" style="width:100%"></img></th>
-		<tr><th>Check your breaking pads!</th></tr>
-		<tr><th>October 23 - October 29</th></tr>
-		<tr><th>Changing oil + breaking pads = 20% discount!</th></tr>
-	</table> -->
-
 </section>
+<footer>
+  <p>We will give best to You!</p>
 
-<!-- <footer>
-  <p>Please send us Your order. So we can give best to You! Thank You!</p>
-
-  <a href="tel:6132972335">613-297-2335 &nbsp;&nbsp;&nbsp;&nbsp;</a>
-  <a href="skype:+1234567890?call">Skype &nbsp;&nbsp;&nbsp;&nbsp;</a>
-  <a href="mailto:polina.sherriuble@gmail.com"> <u>polina.sherriuble@gmail.com</u></a><br><br>
-<div id="shareicons">
-<a href="https://accounts.google.com/signin/v2/identifier?service=mail&flowName=GlifWebSignIn&flowEntry=ServiceLogin">
-<img src="img/em.jpg" alt="Email"/>
-</a>
-<a href="https://www.facebook.com/login/" target="_blank">
-<img src="img/facebook.jpg" alt="Facebook" />
-</a>
-<a href="https://www.google.com/" target="_blank">
-<img src="https://simplesharebuttons.com/images/somacro/google.png"   alt="Google" />
-</a>
-<a href="https://in.linkedin.com/" target="_blank">
-<img src="https://simplesharebuttons.com/images/somacro/linkedin.png" alt="LinkedIn" />
-</a>
-<a href="https://in.pinterest.com/">
-<img src="https://simplesharebuttons.com/images/somacro/pinterest.png" alt="Pinterest" />
-</a>
-<a href="javascript:;" onclick="window.print()">
-<img src="https://simplesharebuttons.com/images/somacro/print.png" alt="Print" />
-</a>
-<a href="https://twitter.com/login?lang=en" target="_blank">
-<img src="https://simplesharebuttons.com/images/somacro/twitter.png" alt="Twitter"/>
-</a>
-</div>
+  <!-- <a href="mailto:polina.sherriuble@gmail.com"> <u>polina.sherriuble@gmail.com </u> </a><br><br> -->
+<a href="https://accounts.google.com/signin/v2/identifier?service=mail&flowName=GlifWebSignIn&flowEntry=ServiceLogin"><img src="https://simplesharebuttons.com/images/somacro/email.png" alt="Email"/></a>
+<a href="https://www.facebook.com/login/" target="_blank"><img src="https://simplesharebuttons.com/images/somacro/facebook.png" alt="Facebook" /></a>
+<a href="https://www.google.com/" target="_blank"><img src="https://simplesharebuttons.com/images/somacro/google.png"   alt="Google" /></a>
+<a href="https://in.linkedin.com/" target="_blank"><img src="https://simplesharebuttons.com/images/somacro/linkedin.png" alt="LinkedIn" /></a>
+<!-- <a href="https://in.pinterest.com/"><img src="https://simplesharebuttons.com/images/somacro/pinterest.png" alt="Pinterest" /></a> -->
+<a href="javascript:;" onclick="window.print()"><img src="https://simplesharebuttons.com/images/somacro/print.png" alt="Print" /></a>
+<a href="https://twitter.com/login?lang=en" target="_blank"><img src="https://simplesharebuttons.com/images/somacro/twitter.png" alt="Twitter"/></a>
   <p>We are Auto motivated!</p>
-</footer> -->
+</footer>
+</body>
+</html>
 
 </body>
 </html>

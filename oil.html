@@ -1,239 +1,146 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-<title>Changing oil and filter on your driveway</title>
-<!-- <meta charset="utf-8"> -->
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<!-- <link rel="stylesheet" href="css/indexstyle.css" /> -->
-
 <style>
-* {
-  box-sizing: border-box;
-}
-
-body {
-  font-family: Arial, Helvetica, sans-serif;
-}
-
-/* Style the header */
-header {
-  background-color: #666;
-  padding: 15px;
-  text-align: center;
-  font-size: 35px;
-  color: white;
-}
-
-/* Create two columns/boxes that floats next to each other */
-nav {
+.dropdown {
   float: left;
-  width: 30%;
-  height: 649px; /* only for demonstration, should be removed */
-  background: #ccc;
-  padding: 20px;
+  overflow: hidden;
+  width: 100%;
 }
-
-/* Style the list inside the menu */
-nav ul {
-  list-style-type: none;
-  padding: 0;
-}
-nav button{
-  background-color: #f4511e;
-  border: none;
-  color: white;
-  padding: 16px 32px;
-  text-align: center;
+.dropdown .dropbtn {
   font-size: 16px;
-  margin: 1px 2px;
-  opacity: 0.6;
-  transition: 0.3s;
-  border-radius: 15px;
-  box-shadow: 0 9px #999;
-}
-nav button:hover {opacity: 1}
-}
-table {
-  font-family: arial, sans-serif;
-  border-collapse: collapse;
-  width: 70%;
-}
-
-td, th {
-  border: 1px solid #dddddd;
-  text-align: left;
-  padding: 8px;
-}
-
-tr:nth-child(even) {
-  background-color: #dddddd;
-}
-form {
-  float: left;
-  padding: 20px;
-  width: 70%;
-  background-color: #f1f1f1;
-  height: 300px; /* only for demonstration, should be removed */
-}
-
-/* Clear floats after the columns */
-section::after {
-  content: "";
-  display: table;
-  clear: both;
-}
-
-/* Style the footer */
-footer {
-  background-color: #777;
-  padding: 10px;
-  text-align: center;
+  border: none;
+  outline: none;
   color: white;
+  padding: 14px 16px;
+  background-color: #f4511e;
+  font-family: inherit;
+  margin: 0;
+
+}
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: #f9f9f9;
+  width: 30%;
+  /* min-width: 260px; */
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  z-index: 1;
+
 }
 
-/* Responsive layout - makes the two columns/boxes stack on top of each other instead of next to each other, on small screens */
-@media (max-width: 600px) {
-  nav, article {
-    width: 100%;
-    height: auto;
-  }
+.dropdown-content a {
+  float: none;
+  color: black;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+  text-align: left;
+
 }
+
+.dropdown-content a:hover {
+  background-color: #ddd;
+}
+
+.dropdown:hover .dropdown-content {
+  display: block;
 </style>
-</head>
 <body>
 
-<header>
-  <h2>Changing oil and filter on your driveway</h2>
-	  <h3>You don't need to come I come to you!</h3>
+<link href = "css/oil.css" type = "text/css" rel = "stylesheet" />
+
+<header style="background-image: url('img/header.jpg');">
+  <img src="img/Vlad.jpg" alt="" with="260" height="260" id="hp"/>
+    <p style= "float: left">Phone: <a href="tel:6132653037" style="color: #8ebf42;">613 265 3037</a></p>
+  <h1> Vlad's Garage</h1>
+  <h2>You need not come I come to you!</h2>
 </header>
 
 <section>
   <nav>
-    <button onClick="openindexPage()">Special offers</button>
-      <script>
-      function openindexPage(){
-        window.location.href='index.html';
-      }
-</script>
-			<p></p>
-			<button > Changing oil and filter</button>
 
+     <button onClick="openindexPage()">Home</button>
+     <script>function openindexPage(){window.location.href='index.html';}</script>
+     <p></p>
+     <button onClick="openaboutPage()">About family business</button>
+      <script>function openaboutPage(){  window.location.href='aboutme.html';}</script>
+      <p></p>
+      <button onClick="openMarketPage()">Car Parts required (Form): </button>
+       <script>function openMarketPage(){  window.location.href='marketForm.html';}</script>
+       <p></p>
+       <button onClick="openFormPage()">Car service required (Form):</button>
+       <script>function openFormPage(){window.location.href='form.html';}</script>
+       <p></p>
+<p></p>
+<button id="safety" onClick="openSafetyPage()">Personal Car Mechanic in Vancouver</button>
+<script>function openSafetyPage(){window.location.href='safety.html';}</script>
+ <p></p>
+      <button onClick="openoilPage()">Change oil and filter</button>
+      <script>function openoilPage(){window.location.href='oil.html';}</script>
+      <p></p>
+      <button id="about" onClick="openDetailingPage()">Detailing a car</button>
+      <script>function openDetailingPage(){window.location.href='detailing.html';}</script>
 			<p></p>
-      <button >Car Detailing</button>
+      <button id="tint" onClick="openTintPage()">Tint a car</button>
+      <script>function openTintPage(){window.location.href='tint.html';}</script>
 			<p></p>
-      <button >Window/ Head & tail light tint</button>
+      <button id="break" onClick="openBreakPage()">Brake pads and rotors change</button>
+      <script>function openBreakPage(){window.location.href='break.html';}</script>
 			<p></p>
-      <button >Breaking pads and rotors change</button>
+      <button id="code" onClick="openCodePage()">Code reading and fix issue</button>
+      <script>function openCodePage(){window.location.href='code.html';}</script>
+      <p></p>
+      <button id="tiers" onClick="openTiersPage()">Changing tires</button>
+      <script>function openTiersPage(){window.location.href='tiers.html';}</script>
+      <p></p>
+      <button id="about" onClick="openTuningPage()">Tuning a car</button>
+			<script>function openTuningPage(){window.location.href='tuning.html';}
+			</script>
 			<p></p>
-			<button >Code reading and fix issue</button>
+       </div>
+        </div>
   </nav>
-
-  <fieldset>
-  <legend><strong>Price for some models</strong></legend>
-  <table>
-    <tr>
-      <th>Model</th>
-      <th>Year</th>
-      <th>Price with our material(Kastrol)</th>
-      <th>Price without material</th>
-    </tr>
-    <tr>
-      <td>Toyota RAV-4</td>
-      <td>2000</td>
-      <td>500</td>
-      <td>300</td>
-    </tr>
-    <tr>
-      <td>RAM</td>
-      <td>2000</td>
-      <td>800</td>
-      <td>500</td>
-    </tr>
-    <tr>
-      <td>RAM</td>
-      <td>2000</td>
-      <td>800</td>
-      <td>500</td>
-    </tr>
-    <tr>
-      <td>RAM</td>
-      <td>2000</td>
-      <td>800</td>
-      <td>500</td>
-    </tr>
-  </table>
 <br>
+
   <fieldset>
-  <legend><strong>Make an order</strong></legend>
-<table>
-<tr>
-  <td><span class="required">*</span>Your Name:</td>
-  <td><input type="text" name="firstName" id="firstName" size="50"></td>
-</tr>
-<tr>
-    <td><span class="required">*</span>Address:</td>
-    <td><input type="text" name="address" id="address" size="50"></td>
-</tr>
-<!-- <tr>
-  <td><span class="required">*</span>Province:</td>
-  <td>
-<select name="province">
-<option value="">Select a province</option>
-<option value="BC">British Columbia</option>
-<option value="AB">Alberta</option>
-<option value="SK">Saskatchewan</option>
-<option value="MB">Manitoba</option>
-<option value="ON">Ontario</option>
-<option value="QC">Quebec</option>
-<option value="NS">Nova Scotia</option>
-<option value="PE">Prince Edward Island</option>
-<option value="NF">Newfoundland</option>
-<option value="YK">Yukon</option>
-<option value="NWR">Northwest Territories</option>
-<option value="NU">Nunavut</option>
-</select>
-</td>
-</tr> -->
-<tr>
-<td><span class="required">*</span>Email:</td>
-<td><input type="text" name="Email" id="email" size="50"></td>
-</tr>
+  <legend><strong><h1>Every half year we change oil in a car in Vancouver.</h1></strong></legend>
+  <table border="1" bordercolor=#d7cae7 align="center">
+	 <tr>
+				 <th><img src="img/code.jpg" style="width:30%"></th>
+	</tr>
+  <p> You are in the trustworthy professional car mechanic hands!</p>
+    <p> This is the best garage in Vancouver!</p>
+	<p> Did you know that your car's oil should be changed every 8,000-10,000 kilometers.
+      Oil changes are one of the most important and easy ways to improve your car's longevity  and performance.</p>
 
-  <tr>
-    <td><span class="required">*</span>Phone:</td>
-    <td><input type="text" name="Home phone" id="home_phone" size="50"></td>
-  </tr>
+  <p> Are you overdue on your oil change? No problem! Fill out our  <a href="form.html">Inquiry Form </a>
+      and we'll come right to you, with all the parts needed - or if you have your own, we're happy to use those too!</p>
 
-  <tr>
-    <td><span class="required">*</span>Car Model:</td>
-    <td><input type="text" name="model" id="model" size="50"></td>
- </tr>
-<tr>
-  <td><span class="required">*</span>Year:</td>
-<td><input type="text" name="year" id="year" size="50"></td>
-</tr>
+  <p> We make regular vehicle check ups to catch any issues that may arise and prevent them from turning into larger (and more expensive!) problems in the future.</p>
 
-<tr>
-  <td>You prefered day and time:</td>
-<td><input type="text" name="ordertime" id="ordertime" size="50"></td>
-</tr>
-<tr>
-  <td><input type="radio" name="yes"value="yes" checked> Send me an email in half year to remind to change oil</td>
-  <td><input type="radio" name="no" value="no"> Do not send me an email with a reminder</td>
-</tr>
-<tr>
- <td><input type="submit" value="Submit"></td>
- </tr>
-          </table>
-          </fieldset>
-          </form>
+      Invest in your car well-being by getting your own mechanic in Vancouver, someone  who knows you, your car, and the best way to maintain it
+      for whatever lifestyle you may have. We believe in the good old-fashioned style of business, one where we build a long-term relationship between you and your four-wheeled baby!
 
-</section>
-
-<footer>
-  <p>We are Auto motivated!</p>
-</footer>
+	<p>	  It is easy to call us  <a href = "tel:6132653037" id="pp"> 613 265 3037 </a> or make an order here: <a href="form.html">Form </a></p>
+	</table>
+</fieldset>
+  </section>
 
 </body>
+
+<footer>
+  <p>We will give best to You!</p>
+
+  <!-- <a href="mailto:polina.sherriuble@gmail.com"> <u>polina.sherriuble@gmail.com </u> </a><br><br> -->
+<a href="https://accounts.google.com/signin/v2/identifier?service=mail&flowName=GlifWebSignIn&flowEntry=ServiceLogin"><img src="https://simplesharebuttons.com/images/somacro/email.png" alt="Email"/></a>
+<a href="https://www.facebook.com/login/" target="_blank"><img src="https://simplesharebuttons.com/images/somacro/facebook.png" alt="Facebook" /></a>
+<a href="https://www.google.com/" target="_blank"><img src="https://simplesharebuttons.com/images/somacro/google.png"   alt="Google" /></a>
+<a href="https://in.linkedin.com/" target="_blank"><img src="https://simplesharebuttons.com/images/somacro/linkedin.png" alt="LinkedIn" /></a>
+<!-- <a href="https://in.pinterest.com/"><img src="https://simplesharebuttons.com/images/somacro/pinterest.png" alt="Pinterest" /></a> -->
+<a href="javascript:;" onclick="window.print()"><img src="https://simplesharebuttons.com/images/somacro/print.png" alt="Print" /></a>
+<a href="https://twitter.com/login?lang=en" target="_blank"><img src="https://simplesharebuttons.com/images/somacro/twitter.png" alt="Twitter"/></a>
+  <p>We are Auto motivated!</p>
+</footer>
+</body>
+</html>
+
 </html>
 <!--file:///C:/Users/polin/AppData/Local/atom/Garage/src/index.html-->

@@ -4,32 +4,21 @@
 </head>
 <body>
 <?PHP
-// Show all information, defaults to INFO_ALL
-// phpinfo();
-//
-// // Show just the module information.
-// // phpinfo(8) yields identical results.
-// phpinfo(INFO_MODULES);
 
-
-  $firstName = $address = $aria = $email = $phone = $brand = $model = $year = $oil_check = $tire_check = $detailing_check =$pad_rotor_check =$codereader_check = $other_check = $ordertime = $send= "";
+  $firstName = $address = $province = $email = $phone = $brand = $model = $year =$todo =$other_check = $ordertime = "";
   if ($_SERVER["REQUEST_METHOD"] == "POST")
         {
             $firstName = test_input($_POST["firstName"]);
             $address = test_input($_POST["address"]);
-            $aria = test_input($_POST["aria"]);
+            $province = $_POST["province"];
             $email = test_input($_POST["email"]);
             $phone = test_input($_POST["phone"]);
             $brand = test_input($_POST["brand"]);
             $model = test_input($_POST["model"]);
             $year = test_input($_POST["year"]);
-            //  $oil_check = test_input($_POST["oil_check"]);
-            // $tire_check = test_input($_POST["tire_check"]);
-            // $detailing_check = test_input($_POST["detailing_check"]);
-            //  $pad_rotor_check = test_input($_POST["pad_rotor_check"]);
-          //  $codereader_check = test_input($_POST["codereader_check"]);
+            $todo = $_POST["todo"];
             $other_check = test_input($_POST["other_check"]);
-            $ordertime = test_input($_POST["ordertime"]);
+            $ordertime = date('Y-m-d', strtotime($_POST['ordertime']));
           //  $send = test_input($_POST["send"]);
           }
 
@@ -66,81 +55,43 @@ try{
     //   echo $va;
     // }}
 
-$stmt = $conn->prepare("INSERT INTO oil_form (`customer_name`,
+$stmt = $conn->prepare("INSERT INTO forma (`customer_name`,
                                               `customer_address`,
-                                              `city_aria`,
+                                               `city_aria`,
                                               `customer_email`,
                                               `customer_phone`,
                                               `car_model`,
                                               `car_brand`,
                                               `car_year`,
+                                               `todo`,
                                               `todoelse`,
-                                             `oilchange_date`)
+                                             `order_date`)
                                       VALUES (:customer_name,
                                               :customer_address,
-                                              :city_aria,
+                                               :city_aria,
                                               :customer_email,
                                               :customer_phone,
                                               :car_model,
                                               :car_brand,
                                               :car_year,
+                                              :todo,
                                               :todoelse,
-                                              :oilchange_date)");
+                                              :order_date)");
 $stmt->bindParam(':customer_name', $firstName);
 $stmt->bindParam(':customer_address', $address);
-$stmt->bindParam(':city_aria', $aria);
+$stmt->bindParam(':city_aria', $province);
 $stmt->bindParam(':customer_email', $email);
 $stmt->bindParam(':customer_phone', $phone);
 $stmt->bindParam(':car_model', $brand);
 $stmt->bindParam(':car_brand', $model);
 $stmt->bindParam(':car_year', $year);
+$stmt->bindParam(':todo', $todo);
 $stmt->bindParam(':todoelse', $other_check);
-$stmt->bindParam(':oilchange_date', $ordertime);
+$stmt->bindParam(':order_date', $ordertime);
 $stmt->execute();
 
 include 'orderConfirm.html';
 }
-//If ($_POST["tire_check"] === 'on' || $_POST["detailing_check"] === 'on' || $_POST["pad_rotor_check"] === 'on'|| $_POST["codereader_check"] === 'on' ||  $_POST["other_check"] === 'on'){
-// if($_POST["tire_check"] == 'off') {
-//    $stmt = $conn->prepare("INSERT INTO tierchange_form (`tcustomer_name`,
-//                                                 `tcustomer_address`,
-//                                                 `tcity_aria`,
-//                                                 `tcustomer_email`,
-//                                                 `tcustomer_phone`,
-//                                                 `tcar_model`,
-//                                                 `tcar_brand`,
-//                                                 `tcar_year`,
-//                                                 `todo`,
-//                                                `ttierchange_date`)
-//                                         VALUES (:customer_name,
-//                                                 :customer_address,
-//                                                 :city_aria,
-//                                                 :customer_email,
-//                                                 :customer_phone,
-//                                                 :car_model,
-//                                                 :car_brand,
-//                                                 :car_year,
-//                                                 :todo,
-//                                                 :oilchange_date)");
-//   $stmt->bindParam(':tcustomer_name', $firstName);
-//   $stmt->bindParam(':tcustomer_address', $address);
-//   $stmt->bindParam(':tcity_aria', $aria);
-//   $stmt->bindParam(':tcustomer_email', $email);
-//   $stmt->bindParam(':tcustomer_phone', $phone);
-//   $stmt->bindParam(':tcar_model', $brand);
-//   $stmt->bindParam(':tcar_brand', $model);
-//   $stmt->bindParam(':tcar_year', $year);
-//   $stmt->bindParam(':todo', $other_check);
-//   $stmt->bindParam(':ttierchange_date', $ordertime);
-//   $stmt->execute();
-//
-//   include 'orderConfirm.html';
-//
-// }
-//  createConfirmationmbox($firstName,$address,$aria, $email, $phone, $brand, $model, $year, $ordertime);
-
-//echo "New record created successfully";
- //}
 
 catch (PDOException $e){
   echo '<h3><br />Catch Connect Error ....' . $e->getMessage() . '<br/></h3>';

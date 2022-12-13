@@ -1,100 +1,154 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-<title>Tiers change</title>
-<!-- <meta charset="utf-8"> -->
-<meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+.dropdown {
+  float: left;
+  overflow: hidden;
+  width: 100%;
+}
+.dropdown .dropbtn {
+  font-size: 16px;
+  border: none;
+  outline: none;
+  color: white;
+  padding: 14px 16px;
+  background-color: #f4511e;
+  font-family: inherit;
+  margin: 0;
+
+}
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: #f9f9f9;
+  width: 30%;
+  /* min-width: 260px; */
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  z-index: 1;
+
+}
+
+.dropdown-content a {
+  float: none;
+  color: black;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+  text-align: left;
+
+}
+
+.dropdown-content a:hover {
+  background-color: #ddd;
+}
+
+.dropdown:hover .dropdown-content {
+  display: block;
+</style>
 </head>
 <body>
-<link href = "css/index.css" type = "text/css" rel = "stylesheet" />
-<header>
-	<img src="img/Vlad.jpg" alt="" with="290" height="290" id="hp"/>
-  <h1>Vlad's Garage</h1>
-	  <h3>You need not come I come to you!</h3>
+
+<link href = "css/oil.css" type = "text/css" rel = "stylesheet" />
+
+<header style="background-image: url('img/header.jpg');">
+  <img src="img/Vlad.jpg" alt="" with="260" height="260" id="hp"/>
+    <p style= "float: left">Phone: <a href="tel:6132653037" style="color: #8ebf42;">613 265 3037</a></p>
+  <h1> Vlad's Garage</h1>
+  <h2>You need not come I come to you!</h2>
 </header>
 
 <section>
-  <nav background-size: 100% 100%:>
-		  <button id="about" onClick="openAboutPage()">About our family business</button>
-		  <script>function openAboutPage(){window.location.href='aboutme.html';}</script>
-	  	<p></p>
-		  <button onClick="openindexPage()">Special offers</button>
-			<script>function openindexPage(){window.location.href='index.html';}</script>
+  <nav>
+
+     <button onClick="openindexPage()">Home</button>
+     <script>function openindexPage(){window.location.href='index.html';}</script>
+     <p></p>
+     <button onClick="openaboutPage()">About family business</button>
+      <script>function openaboutPage(){  window.location.href='aboutme.html';}</script>
+      <p></p>
+      <button onClick="openMarketPage()">Car Parts required (Form): </button>
+       <script>function openMarketPage(){  window.location.href='marketForm.html';}</script>
+       <p></p>
+       <button onClick="openFormPage()">Car service required (Form):</button>
+       <script>function openFormPage(){window.location.href='form.html';}</script>
+       <p></p>
+
+       <div class="dropdown">
+       <button class="dropbtn">Garage services in Vancouver: </button>
+       <div class="dropdown-content">
+<p></p>
+<button id="safety" onClick="openSafetyPage()">Personal Car Mechanic in Vancouver</button>
+<script>function openSafetyPage(){window.location.href='safety.html';}</script>
+ <p></p>
+      <button onClick="openoilPage()">Change oil and filter</button>
+      <script>function openoilPage(){window.location.href='oil.html';}</script>
+      <p></p>
+      <button id="about" onClick="openDetailingPage()">Detailing a car</button>
+      <script>function openDetailingPage(){window.location.href='detailing.html';}</script>
 			<p></p>
-			<button id="oil" onClick="openOilPage()"> Changing oil and filter</button>
-			<script>	function openOilPage(){window.location.href='oil.html';}</script>
+      <button id="tint" onClick="openTintPage()">Tint a car</button>
+      <script>function openTintPage(){window.location.href='tint.html';}</script>
 			<p></p>
-			<button id="about" onClick="openDetailingPage()">Detailing a car</button>
-			<script>function openDetailingPage(){window.location.href='detailing.html';}</script>
+      <button id="break" onClick="openBreakPage()">Brake pads and rotors change</button>
+      <script>function openBreakPage(){window.location.href='break.html';}</script>
 			<p></p>
-			<button id="tint" onClick="openTintPage()">Window/ Head & tail light tint</button>
-			<script>function openTintPage(){window.location.href='tint.html';}</script>
+      <button id="code" onClick="openCodePage()">Code reading and fix issue</button>
+      <script>function openCodePage(){window.location.href='code.html';}</script>
+      <p></p>
+      <button id="tiers" onClick="openTiersPage()">Changing tires</button>
+      <script>function openTiersPage(){window.location.href='tiers.html';}</script>
+      <p></p>
+      <button id="about" onClick="openTuningPage()">Tuning a car</button>
+			<script>function openTuningPage(){window.location.href='tuning.html';}
+			</script>
 			<p></p>
-			<button id="break" onClick="openBreakPage()">Breaking pads and rotors change</button>
-			<script>function openBreakPage(){window.location.href='break.html';}</script>
-			<p></p>
-			<button id="code" onClick="openCodePage()">Code reading and fix issue</button>
-			<script>function openCodePage(){window.location.href='code.html';}</script>
-			<p></p>
-			<button id="about" onClick="openTuningPage()">Tuning a car</button>
-			<script>function openTuningPage(){window.location.href='tuning.html';	}</script>
+       </div>
+        </div>
   </nav>
+<br>
 
 	<fieldset>
-  <legend><strong>Are you ready for the season?</strong></legend>
+  <legend><strong><h2>Are you ready for the season? Do you feel safe in your car?</h2></strong></legend>
   <table border="1" bordercolor=#666 align="center">
-		  <tr><th></th></tr>
 	 <tr>
-				 <th><img src="img/family.jpg" style="width:30%"></th>
+				 <th><img src="img/tire.jpg" style="width:90%"></th>
 	</tr>
-	<tr><th>I change tiers.</th></tr>
-<tr><th>We want you to be happy!</th></tr>
+
+	<p> You are in the best professional car mechanic hands!</p>
+	<p> This is the best car tiers service in Vancouver.</p>
+	<p> Are you ready for the winter season? If your tires are assembled (wheels and rims) we can come to your door, and change them for you in a flash!
+	 If not, let us take your wheels back to our shop and get them ready to put on in less than a day!  </p>
+	 <p>We also offer assistance in finding the right tires and rims for your car for any season based on your vehicle's individual specifications. </p>
+
+	<p> No other garage in Vancouver offers aftermarket part installation and upgrades done at your doorstep.
+		  We can <b>modify your car based on your individual preference. </b> If you're looking to upgrade your rims and wheels for a more sporty and aggressive look,
+			 then you've come to the right place. Here at Vlad's Garage, we're all about making your car look the best it can be!
+			  We offer consultations in finding the best aftermarket tires for your desired look based on your vehicle individual specifications. . </p>
+
+	<p>Contact us now through our <a href="form.html">Inquiry Form </a> to find the perfect wheel fit and look for your car. Call <a href = "tel:6132653037"> 613 265 3037 </a></p>
+
+	<p> We make <b>regular vehicle check ups</b> to catch any issues that may arise and prevent them from turning into larger (and more expensive!) problems in the future.</p>
+			Invest in your car well-being by getting your own mechanic in Vancouver, someone  who knows you, your car, and the best way to maintain it
+			for whatever lifestyle you may have. We believe in the good old-fashioned style of business, one where we build a long-term relationship between you and your four-wheeled baby!
+
+	<p> Make your car a part of your family and enjoy driving it with pride!</p>
+	<p>	 Add some personality to your car and make it unique by contacting us today through our <a href="form.html">Inquiry Form</a> or call <a href = "tel:6132653037"> 613 265 3037 </a> </p>
+
+<p>We want you to be happy!</p>
+
 	</table>
-
-	<!-- <fieldset>
-	<legend><strong>Be ready for the winter!</strong></legend>
-	<table border="1" bordercolor=#666 align="center">
-			<tr><th></th></tr>
-	 <tr>
-				 <td><img src="img/winter_banner.jpg" style="width:100%"></img></th>
-		<tr><th>Check your breaking pads!</th></tr>
-		<tr><th>October 23 - October 29</th></tr>
-		<tr><th>Changing oil + breaking pads = 20% discount!</th></tr>
-	</table> -->
-
 </section>
 
-<!-- <footer>
-  <p>Please send us Your order. So we can give best to You! Thank You!</p>
+<footer>
+  <p>We will give best to You!</p>
 
-  <a href="tel:6132972335">613-297-2335 &nbsp;&nbsp;&nbsp;&nbsp;</a>
-  <a href="skype:+1234567890?call">Skype &nbsp;&nbsp;&nbsp;&nbsp;</a>
-  <a href="mailto:polina.sherriuble@gmail.com"> <u>polina.sherriuble@gmail.com</u></a><br><br>
-<div id="shareicons">
-<a href="https://accounts.google.com/signin/v2/identifier?service=mail&flowName=GlifWebSignIn&flowEntry=ServiceLogin">
-<img src="img/em.jpg" alt="Email"/>
-</a>
-<a href="https://www.facebook.com/login/" target="_blank">
-<img src="img/facebook.jpg" alt="Facebook" />
-</a>
-<a href="https://www.google.com/" target="_blank">
-<img src="https://simplesharebuttons.com/images/somacro/google.png"   alt="Google" />
-</a>
-<a href="https://in.linkedin.com/" target="_blank">
-<img src="https://simplesharebuttons.com/images/somacro/linkedin.png" alt="LinkedIn" />
-</a>
-<a href="https://in.pinterest.com/">
-<img src="https://simplesharebuttons.com/images/somacro/pinterest.png" alt="Pinterest" />
-</a>
-<a href="javascript:;" onclick="window.print()">
-<img src="https://simplesharebuttons.com/images/somacro/print.png" alt="Print" />
-</a>
-<a href="https://twitter.com/login?lang=en" target="_blank">
-<img src="https://simplesharebuttons.com/images/somacro/twitter.png" alt="Twitter"/>
-</a>
-</div>
+  <!-- <a href="mailto:polina.sherriuble@gmail.com"> <u>polina.sherriuble@gmail.com </u> </a><br><br> -->
+<a href="https://accounts.google.com/signin/v2/identifier?service=mail&flowName=GlifWebSignIn&flowEntry=ServiceLogin"><img src="https://simplesharebuttons.com/images/somacro/email.png" alt="Email"/></a>
+<a href="https://www.facebook.com/login/" target="_blank"><img src="https://simplesharebuttons.com/images/somacro/facebook.png" alt="Facebook" /></a>
+<a href="https://www.google.com/" target="_blank"><img src="https://simplesharebuttons.com/images/somacro/google.png"   alt="Google" /></a>
+<a href="https://in.linkedin.com/" target="_blank"><img src="https://simplesharebuttons.com/images/somacro/linkedin.png" alt="LinkedIn" /></a>
+<!-- <a href="https://in.pinterest.com/"><img src="https://simplesharebuttons.com/images/somacro/pinterest.png" alt="Pinterest" /></a> -->
+<a href="javascript:;" onclick="window.print()"><img src="https://simplesharebuttons.com/images/somacro/print.png" alt="Print" /></a>
+<a href="https://twitter.com/login?lang=en" target="_blank"><img src="https://simplesharebuttons.com/images/somacro/twitter.png" alt="Twitter"/></a>
   <p>We are Auto motivated!</p>
-</footer> -->
-
+</footer>
 </body>
 </html>

@@ -1,69 +1,137 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-<title>Code reading</title>
-<!-- <meta charset="utf-8"> -->
-<meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+.dropdown {
+  float: left;
+  overflow: hidden;
+  width: 100%;
+}
+.dropdown .dropbtn {
+  font-size: 16px;
+  border: none;
+  outline: none;
+  color: white;
+  padding: 14px 16px;
+  background-color: #f4511e;
+  font-family: inherit;
+  margin: 0;
+
+}
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: #f9f9f9;
+  width: 30%;
+  /* min-width: 260px; */
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  z-index: 1;
+
+}
+
+.dropdown-content a {
+  float: none;
+  color: black;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+  text-align: left;
+
+}
+
+.dropdown-content a:hover {
+  background-color: #ddd;
+}
+
+.dropdown:hover .dropdown-content {
+  display: block;
+</style>
 </head>
 <body>
-<link href = "css/index.css" type = "text/css" rel = "stylesheet" />
-<header>
-	<img src="img/Vlad.jpg" alt="" with="290" height="290" id="hp"/>
-  <h1>Vlad's Garage</h1>
-	  <h3>You need not come I come to you!</h3>
+
+<link href = "css/oil.css" type = "text/css" rel = "stylesheet" />
+
+<header style="background-image: url('img/header.jpg');">
+  <img src="img/Vlad.jpg" alt="" with="260" height="260" id="hp"/>
+    <p style= "float: left">Phone: <a href="tel:6132653037" style="color: #8ebf42;">613 265 3037</a></p>
+  <h1> Vlad's Garage</h1>
+  <h2>You need not come I come to you!</h2>
 </header>
 
 <section>
-  <nav background-size: 100% 100%:>
-		 <button id="about" onClick="openAboutPage()">About our family business</button>
-		 <script>function openAboutPage(){window.location.href='aboutme.html';}</script>
-		 <p></p>
-		  <button onClick="openindexPage()">Special offers</button>
-			<script>function openindexPage(){window.location.href='index.html';}</script>
+  <nav>
+
+     <button onClick="openindexPage()">Home</button>
+     <script>function openindexPage(){window.location.href='index.html';}</script>
+     <p></p>
+     <button onClick="openaboutPage()">About family business</button>
+      <script>function openaboutPage(){  window.location.href='aboutme.html';}</script>
+      <p></p>
+      <button onClick="openMarketPage()">Car Parts required (Form): </button>
+       <script>function openMarketPage(){  window.location.href='marketForm.html';}</script>
+       <p></p>
+       <button onClick="openFormPage()">Car service required (Form):</button>
+       <script>function openFormPage(){window.location.href='form.html';}</script>
+       <p></p>
+
+       <div class="dropdown">
+       <button class="dropbtn">Garage services in Vancouver: </button>
+       <div class="dropdown-content">
+<p></p>
+<button id="safety" onClick="openSafetyPage()">Personal Car Mechanic in Vancouver</button>
+<script>function openSafetyPage(){window.location.href='safety.html';}</script>
+ <p></p>
+      <button onClick="openoilPage()">Change oil and filter</button>
+      <script>function openoilPage(){window.location.href='oil.html';}</script>
+      <p></p>
+      <button id="about" onClick="openDetailingPage()">Detailing a car</button>
+      <script>function openDetailingPage(){window.location.href='detailing.html';}</script>
 			<p></p>
-			<button id="oil" onClick="openOilPage()"> Changing oil and filter</button>
-			<script>	function openOilPage(){window.location.href='oil.html';}</script>
+      <button id="tint" onClick="openTintPage()">Tint a car</button>
+      <script>function openTintPage(){window.location.href='tint.html';}</script>
 			<p></p>
-			<button id="about" onClick="openDetailingPage()">Detailing a car</button>
-			<script>function openDetailingPage(){window.location.href='detailing.html';}</script>
+      <button id="break" onClick="openBreakPage()">Brake pads and rotors change</button>
+      <script>function openBreakPage(){window.location.href='break.html';}</script>
 			<p></p>
-			<button id="tint" onClick="openTintPage()">Window/ Head & tail light tint</button>
-			<script>function openTintPage(){window.location.href='tint.html';}</script>
+      <button id="code" onClick="openCodePage()">Code reading and fix issue</button>
+      <script>function openCodePage(){window.location.href='code.html';}</script>
+      <p></p>
+      <button id="tiers" onClick="openTiersPage()">Changing tires</button>
+      <script>function openTiersPage(){window.location.href='tiers.html';}</script>
+      <p></p>
+      <button id="about" onClick="openTuningPage()">Tuning a car</button>
+			<script>function openTuningPage(){window.location.href='tuning.html';}
+			</script>
 			<p></p>
-			<button id="break" onClick="openBreakPage()">Breaking pads and rotors change</button>
-			<script>function openBreakPage(){window.location.href='break.html';}</script>
-			<p></p>
-			<button id="tiers" onClick="openTiersPage()">Changing tiers</button>
-			<script>function openTiersPage(){window.location.href='tiers.html';}</script>
-			<p></p>
-			<button id="about" onClick="openTuningPage()">Tuning a car</button>
-			<script>function openTuningPage(){window.location.href='tuning.html';	}</script>
+       </div>
+        </div>
   </nav>
+<br>
 
 	<fieldset>
-  <legend><strong>We make a diagnoz to your car</strong></legend>
+  <legend><strong><h2>Engine Light On? - DIAGNOSE THE PROBLEM </h2></strong></legend>
   <table border="1" bordercolor=#666 align="center">
-		  <tr><th></th></tr>
 	 <tr>
 				 <th><img src="img/code.jpg" style="width:30%"></th>
 	</tr>
-	<tr><th>Something wrong with your car? Do not worry, I will check your car and find out what is wrong and how to fix it.</th></tr>
-<tr><th>We want you to be happy!</th></tr>
 
+	<p> You are in the best professional car mechanic hands!</p>
+	<p> This is the best garage in Vancouver.</p>
+	<p> We make a diagnosis of your car.</p>
+	<p> It is never a fun time when the "Check Engine" light comes on, but it doesn't necessarily mean that there has to be an expensive trip to the garage.
+	We can come to you to diagnose the problem and check your cars function with our state of the art operating systems to quickly and accurately see what it needs to be back and running
+	 in its smoothest condition.  </p>
 
-	</table>
+	<p> As well, we can diagnose any problems your car may have that you haven't been alerted to - remember,
+	    the engine light doesn't need to come on for you to have a problem. If there is something wrong with your car,
+			it is better to catch it early to save yourself a worse problem to deal with in the future.  </p>
 
-	<!-- <fieldset>
-	<legend><strong>Be ready for the winter!</strong></legend>
-	<table border="1" bordercolor=#666 align="center">
-			<tr><th></th></tr>
-	 <tr>
-				 <td><img src="img/winter_banner.jpg" style="width:100%"></img></th>
-		<tr><th>Check your breaking pads!</th></tr>
-		<tr><th>October 23 - October 29</th></tr>
-		<tr><th>Changing oil + breaking pads = 20% discount!</th></tr>
-	</table> -->
+	<p>Save yourself the headache and book your appointment today through our <a href="form.html">Inquiry Form </a> . Call <a href = "tel:6132653037"> 613 265 3037 </a></p>
 
+	<p> We make <b>regular vehicle check ups</b> to catch any issues that may arise and prevent them from turning into larger (and more expensive!) problems in the future.</p>
+			Invest in your car well-being by getting your own mechanic in Vancouver, someone  who knows you, your car, and the best way to maintain it
+			for whatever lifestyle you may have. We believe in the good old-fashioned style of business, one where we build a long-term relationship between you and your four-wheeled baby!
+
+  <p>  We want you to be happy!</p>
+	<p>  It is easy to call us or make an order here: <a href="form.html">Form</p>
+  </table>
 </section>
 
 <!-- <footer>

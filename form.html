@@ -1,0 +1,236 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<title>Changing oil and filter on your driveway</title>
+<!-- <meta charset="utf-8"> -->
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+.dropdown {
+  float: left;
+  overflow: hidden;
+  width: 100%;
+}
+.dropdown .dropbtn {
+  font-size: 16px;
+  border: none;
+  outline: none;
+  color: white;
+  padding: 14px 16px;
+  background-color: #f4511e;
+  font-family: inherit;
+  margin: 0;
+
+}
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: #f9f9f9;
+  width: 30%;
+  /* min-width: 260px; */
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  z-index: 1;
+
+}
+
+.dropdown-content a {
+  float: none;
+  color: black;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+  text-align: left;
+
+}
+
+.dropdown-content a:hover {
+  background-color: #ddd;
+}
+
+.dropdown:hover .dropdown-content {
+  display: block;
+</style>
+</head>
+<body>
+
+<link href = "css/oil.css" type = "text/css" rel = "stylesheet" />
+
+<header style="background-image: url('img/header.jpg');">
+  <img src="img/Vlad.jpg" alt="" with="260" height="260" id="hp"/>
+    <p style= "float: left">Phone: <a href="tel:6132653037" style="color: #8ebf42;">613 265 3037</a></p>
+  <h1> Vlad's Garage</h1>
+  <h2>You need not come I come to you!</h2>
+</header>
+
+<section>
+  <nav>
+
+     <button onClick="openindexPage()">Home</button>
+     <script>function openindexPage(){window.location.href='index.html';}</script>
+     <p></p>
+     <button onClick="openaboutPage()">About family business</button>
+      <script>function openaboutPage(){  window.location.href='aboutme.html';}</script>
+      <p></p>
+      <button onClick="openMarketPage()">Car Parts required (Form): </button>
+       <script>function openMarketPage(){  window.location.href='marketForm.html';}</script>
+       <p></p>
+       <button onClick="openFormPage()">Car service required (Form):</button>
+       <script>function openFormPage(){window.location.href='form.html';}</script>
+       <p></p>
+
+       <div class="dropdown">
+       <button class="dropbtn">Garage services in Vancouver: </button>
+       <div class="dropdown-content">
+<p></p>
+<button id="safety" onClick="openSafetyPage()">Personal Car Mechanic in Vancouver</button>
+<script>function openSafetyPage(){window.location.href='safety.html';}</script>
+ <p></p>
+      <button onClick="openoilPage()">Change oil and filter</button>
+      <script>function openoilPage(){window.location.href='oil.html';}</script>
+      <p></p>
+      <button id="about" onClick="openDetailingPage()">Detailing a car</button>
+      <script>function openDetailingPage(){window.location.href='detailing.html';}</script>
+			<p></p>
+      <button id="tint" onClick="openTintPage()">Tint a car</button>
+      <script>function openTintPage(){window.location.href='tint.html';}</script>
+			<p></p>
+      <button id="break" onClick="openBreakPage()">Brake pads and rotors change</button>
+      <script>function openBreakPage(){window.location.href='break.html';}</script>
+			<p></p>
+      <button id="code" onClick="openCodePage()">Code reading and fix issue</button>
+      <script>function openCodePage(){window.location.href='code.html';}</script>
+      <p></p>
+      <button id="tiers" onClick="openTiersPage()">Changing tires</button>
+      <script>function openTiersPage(){window.location.href='tiers.html';}</script>
+      <p></p>
+      <button id="about" onClick="openTuningPage()">Tuning a car</button>
+			<script>function openTuningPage(){window.location.href='tuning.html';}
+			</script>
+			<p></p>
+       </div>
+        </div>
+  </nav>
+<br>
+  <fieldset>
+  <legend><strong><h2>Send us your order or call: 613 297 2335</h2></strong></legend>
+
+  <table border="1" bordercolor=#666 align="center">
+	<tr><th></th></tr>
+  <form id = "openModal" action="submit_oilchange.php" method="POST">
+
+<tr>
+  <td><span class="required">*</span>Your Name:</td>
+  <td><input type="text" name="firstName" id="firstName" size="50" placeholder="Maria"></td>
+</tr>
+
+<tr>
+  <td></span>In which part of Vancouver do you leave:</td>
+  <td>
+<select name="province">
+<option value="">Select an area</option>
+<option id="northVancouver" value="2">North Vancouver</option>
+<option id="westVancouver"value="3">West Vancouver</option>
+<option id="Burnaby"value="4">Burnaby</option>
+<option id="richmond"value="6">Richmond</option>
+<option id="newWestminster"value="7">New Westminster</option>
+<option id="surrey"value="8">Surrey</option>
+<option id="portCoquitlam"value="9">Port Coquitlam</option>
+<option id="coquitlam"value="10">Coquitlam</option>
+<option id="delta"value="11">Delta</option>
+<option id="downtown"value="12">Downtown</option>
+</select>
+</td>
+</tr>
+<tr>
+    <td></span>Address:</td>
+    <td><input type="text" name="address" id="address" placeholder="234 McGibbon dr."size="50"></td>
+</tr>
+<tr>
+<td><span class="required">*</span>Email:</td>
+<td><input type="text" name="email" id="email" size="50" placeholder="email@gmail.ca"></td>
+</tr>
+
+  <tr>
+    <td><span class="required">*</span>Phone:</td>
+    <td><input type="text" name="phone" id="phone" size="50" placeholder="6132972332"></td>
+  </tr>
+  <tr>
+    <td><span class="required">*</span>Car Brand:</td>
+    <td><input type="text" name="brand" id="brand" size="50" placeholder="Toyta"></td>
+ </tr>
+  <tr>
+    <td><span class="required">*</span>Car Model:</td>
+    <td><input type="text" name="model" id="model" size="50" placeholder="RAV-4"></td>
+ </tr>
+<tr>
+  <td><span class="required">*</span>Year:</td>
+<td><input type="text" name="year" id="year" size="50" placeholder="2010"></td>
+</tr>
+
+ <tr>
+    <td></span>What to do with your car: </td>
+    <td>
+  <select name="todo">
+  <option >Select a work</option>
+  <option value="1">Safety check</option>
+  <option value="2">Change oil and filter</option>
+  <option value="3">Change tires</option>
+  <option value="7">Car detaling</option>
+  <option value="8">Change pads/ rotors</option>
+  <option value="9">The diagnostic trouble code</option>
+  </select>
+  </td>
+  </tr>
+
+               <td><span class="required">*</span>Which help do you need:</td>
+               <td><input type="text" name="other_check" id="other_check" size="50"></td>
+               </tr>
+<tr>
+  <td>Prefered day:</td>
+<td><input type="date" id="ordertime" name="ordertime"></td>
+</tr>
+<tr>
+ <!-- <td><input type="submit" id ="submit" value="Submit" style="background-color: #057642;color: white;height:30px; width:100px"></td> -->
+<td><input type="submit" id ="submit" value="Submit" ></td>
+ </tr>
+          </table>
+          </fieldset>
+          </form>
+
+</section>
+
+
+
+<footer>
+  <p>Please send us Your order. So we can give best to You! Thank You!</p>
+<div id="shareicons">
+  <a href="tel:6132972335">613-297-2335 &nbsp;&nbsp;&nbsp;&nbsp;</a>
+  <a href="skype:+1234567890?call">Skype &nbsp;&nbsp;&nbsp;&nbsp;</a>
+  <a href="mailto:polina.sherriuble@gmail.com"> <u>polina.sherriuble@gmail.com </u> </a><br><br>
+<a href="https://accounts.google.com/signin/v2/identifier?service=mail&flowName=GlifWebSignIn&flowEntry=ServiceLogin">
+<img src="https://simplesharebuttons.com/images/somacro/email.png" alt="Email"/>
+</a>
+<a href="https://www.facebook.com/login/" target="_blank">
+<img src="https://simplesharebuttons.com/images/somacro/facebook.png" alt="Facebook" />
+</a>
+<a href="https://www.google.com/" target="_blank">
+<img src="https://simplesharebuttons.com/images/somacro/google.png"   alt="Google" />
+</a>
+<a href="https://in.linkedin.com/" target="_blank">
+<img src="https://simplesharebuttons.com/images/somacro/linkedin.png" alt="LinkedIn" />
+</a>
+<a href="https://in.pinterest.com/">
+<img src="https://simplesharebuttons.com/images/somacro/pinterest.png" alt="Pinterest" />
+</a>
+<a href="javascript:;" onclick="window.print()">
+<img src="https://simplesharebuttons.com/images/somacro/print.png" alt="Print" />
+</a>
+<a href="https://twitter.com/login?lang=en" target="_blank">
+<img src="https://simplesharebuttons.com/images/somacro/twitter.png" alt="Twitter"/>
+</a>
+</div>
+  <p>We are Auto motivated!</p>
+</footer>
+
+</body>
+</html>
+<!--file:///C:/Users/polin/AppData/Local/atom/Garage/src/index.html-->
